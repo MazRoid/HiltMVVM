@@ -6,8 +6,9 @@ import kotlinx.android.parcel.Parcelize
 import com.google.gson.annotations.SerializedName
 
 @Parcelize
-@Entity(tableName = "MainUserModel")
+
 data class MainUserModel(
+
     @ColumnInfo(name = "info")
     @SerializedName("info")
     var info: Info,
@@ -33,7 +34,10 @@ data class Info(
 ) : Parcelable
 
 @Parcelize
+@Entity(tableName = "ResultUser" , primaryKeys = ["email","gender"])
 data class ResultUser(
+    @SerializedName("isAccepted")
+    var isAccepted: String ,
     @ColumnInfo(name = "cell")
     @SerializedName("cell")
     var cell: String,
@@ -46,12 +50,12 @@ data class ResultUser(
     @ColumnInfo(name = "gender")
     @SerializedName("gender")
     var gender: String,
-    @ColumnInfo(name = "id")
-    @SerializedName("id")
-    var id: Id,
+//    @ColumnInfo(name = "id")
+//    @SerializedName("id")
+//    var id: Id,
     @ColumnInfo(name = "location")
     @SerializedName("location")
-    var location: Location,
+    var location: UserLocation,
 //    @ColumnInfo(name = "login")
 //    @SerializedName("login")
 //    var login: Login,
@@ -81,6 +85,7 @@ data class ResultUser(
         var date: String
     ) : Parcelable
 
+    /* Not Used
     @Parcelize
     data class Id(
         @ColumnInfo(name = "name")
@@ -91,7 +96,6 @@ data class ResultUser(
         var value: String
     ) : Parcelable
 
-    /* Not Used
     @Parcelize
     data class Login(
         @ColumnInfo(name = "md5")
@@ -155,7 +159,7 @@ data class ResultUser(
 }
 
 @Parcelize
-data class Location(
+data class UserLocation(
     @ColumnInfo(name = "city")
     @SerializedName("city")
     var city: String,

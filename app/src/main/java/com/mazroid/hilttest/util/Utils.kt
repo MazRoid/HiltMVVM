@@ -1,5 +1,9 @@
 package com.mazroid.hilttest.util
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.util.Log
+import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -20,5 +24,19 @@ class Utils {
                 }
             }
         }
+
+        fun isOnline(context: Context?): Boolean {
+            try {
+                val cm =
+                    context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+                val netInfo = cm.activeNetworkInfo;
+                return netInfo != null && netInfo.isConnected
+            } catch (e: IOException) {
+                Log.d("😅", "e-isOnline:$e ");
+                return false
+            }
+
+        }
+
     }
 }
