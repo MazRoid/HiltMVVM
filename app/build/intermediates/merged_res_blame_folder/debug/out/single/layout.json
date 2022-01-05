@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/Mazhar/Mazhar/Projects/HiltTest/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/Mazhar/Mazhar/Projects/HiltTest/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/Mazhar/Mazhar/Projects/HiltTest/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/progress_dialog.xml",
+        "source": "/Users/Mazhar/Mazhar/Projects/HiltTest/app/src/main/res/layout/progress_dialog.xml"
+    },
+    {
+        "merged": "/Users/Mazhar/Mazhar/Projects/HiltTest/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/recycler_item.xml",
+        "source": "/Users/Mazhar/Mazhar/Projects/HiltTest/app/src/main/res/layout/recycler_item.xml"
+    }
+]
